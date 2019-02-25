@@ -1,0 +1,4 @@
+['Drug', 'Total Cost', 'Unique Individuals']
+['CHLORPROMAZINE', 3000.0, 2]
+['BENZTROPINE MESYLATE', 1500.0, 1]
+['AMBIEN', 300.0, 2]
