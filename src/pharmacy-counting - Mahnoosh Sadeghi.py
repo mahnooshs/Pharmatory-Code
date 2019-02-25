@@ -7,10 +7,12 @@ Created on Sun Feb 24 10:40:53 2019
 #Defining dictionary and an integer for the rest of the code
 dct={}
 i=1
-
+import sys
+input = sys.argv[1]
+output = sys.argv[2]
 #Opening the text file
 #file = open("C:/Users/m7979/Downloads/Insight/pharmacy_counting-master/pharmacy_counting-master/insight_testsuite/tests/test_1/input/itcont.txt",'r')
-file = open("../input/itcont.txt",'r')
+file = open(input,'r')
 #Skiping the header line 
 next (file)
 #Reading in the data as a comma delimited text
@@ -70,7 +72,7 @@ data.sort(key=lambda x: x[1], reverse=True)
 data.insert(0,['Drug','Total Cost','Unique Individuals'])   
 
 #Creating output file in the directory
-with open('output.txt', 'w') as f:
+with open(output, 'w') as f:
     for item in data:
         f.write("%s\n" % item)
         
