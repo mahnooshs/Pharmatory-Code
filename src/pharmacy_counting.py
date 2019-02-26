@@ -28,7 +28,8 @@ for i in range(len(pharm)):
     medical[i][3] = pharm[i][4]
     medical[i][2] = pharm[i][3]
     medical[i][1] = pharm[i][1] + ' ' +pharm[i][2]
-    
+    medical[i][0]=pharm[i][0]
+
 #Making a list of the name of drugs by creating a dictionary and a for loop   
 for drug in medical:
     dct.setdefault(drug[2],[]).append(drug)     
