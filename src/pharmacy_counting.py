@@ -20,7 +20,7 @@ pharm = content
 
 medical= [0]*len(pharm)
 for i in range(len(pharm)):
-    medical[i]=['', '', 0]
+    medical[i]=['', 0, 0]
 
 #Combining first name and last name to get full name
 
