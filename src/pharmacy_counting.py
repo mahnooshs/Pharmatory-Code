@@ -12,17 +12,17 @@ infile = sys.argv[1]
 outfile = sys.argv[2]
 #file = open(sys.argv[1],'r')
 #Opening the text file
-file = open("..\\input\\itcont.txt",'r')
+#file = open("..\\input\\itcont.txt",'r')
 #Skiping the header line 
-next (file)
+#next (file)
 #Reading in the data as a comma delimited text
 #content = file.readlines()
 
 lines = []
-with file as f:
-    content = [line for line in f if line.strip()]
-#with open(sys.argv[1]) as f:
+#with file as f:
  #   content = [line for line in f if line.strip()]
+with open(sys.argv[1]) as f:
+    content = [line for line in f if line.strip()]
 pharm=content
 for i in range (len(pharm)):
     pharm[i] = pharm[i].split(",")
