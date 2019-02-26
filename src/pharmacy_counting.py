@@ -20,19 +20,19 @@ pharm = content
 
 medical= [0]*len(pharm)
 for i in range(len(pharm)):
-    medical[i]=['', 0, 0]
+    medical[i]=[0, '', '', 0]
 
 #Combining first name and last name to get full name
 
 for i in range(len(pharm)): 
-    medical[i][2] = float(pharm[i][4])
-    medical[i][1] = pharm[i][3]
-    medical[i][0] = pharm[i][1] + ' ' +pharm[i][2]
+    medical[i][3] = float(pharm[i][4])
+    medical[i][2] = pharm[i][3]
+    medical[i][1] = pharm[i][1] + ' ' +pharm[i][2]
     
 
 #Making a list of the name of drugs by creating a dictionary and a for loop   
 for drug in medical:
-    dct.setdefault(drug[1],[]).append(drug)     
+    dct.setdefault(drug[2],[]).append(drug)     
 med= list(dct.keys())
 
 #Defining the objects that we are using during the rest of the code, the for loop is to make sure the length is sufficient
@@ -49,12 +49,12 @@ for i in range ((len(med))):
 for i in range (len(med)):
     name=[0]*len(dct[med[i]])
     for j in range (len(dct[med[i]])):
-                name[j]=(dct[med[i]])[j][0]  
+                name[j]=(dct[med[i]])[j][1]  
     indiv[i]=len(name)-name.count([]) 
 #Calculation the total cost for each drug based on dctionary values      
 for i in range (len(med)):
     for j in range (len(dct[med[i]])):
-        totcost[i]=totcost[i]+int(dct[med[i]])[j][2]
+        totcost[i]=totcost[i]+int(dct[med[i]])[j][3]
 
 
 #Creating a dataset that includes all the info that I created
