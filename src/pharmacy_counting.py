@@ -10,17 +10,10 @@ dct={}
 i=1
 infile = sys.argv[1]
 outfile = sys.argv[2]
-#file = open(sys.argv[1],'r')
-#Opening the text file
-#file = open("..\\input\\itcont.txt",'r')
-#Skiping the header line 
-#next (file)
-#Reading in the data as a comma delimited text
-#content = file.readlines()
 
-lines = []
-#with file as f:
- #   content = [line for line in f if line.strip()]
+
+#Reading in the data as a comma delimited text
+lines =[]
 with open(sys.argv[1]) as f:
     content = [line for line in f if line.strip()]
 pharm=content
