@@ -1,2 +1,2 @@
-#! /bin/sh
-python3 ./src/pharmacy-counting - Mahnoosh Sadeghi.py
+#!/bin/bash
+python ./src/pharmacy_counting.py ./input/itcont.txt ./output/top_cost_drug.txt
