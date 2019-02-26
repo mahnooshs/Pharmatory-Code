@@ -77,8 +77,8 @@ data.insert(0,['drug_name','num_prescriber','total_cost'])
 #IF YOU PRINT data, it is the output!
 #Creating output file in the directory
 with open(sys.argv[2], 'w') as output:
-    csv_writer = csv.writer(output)
-    csv_writer.writerows(data)
+    #csv_writer = csv.writer(output)
+    csv.writer(output).writerows(data)
 
 #in case you want to get a text file as output please run follosing codes
 #with open(sys.argv[2], 'w') as output:
