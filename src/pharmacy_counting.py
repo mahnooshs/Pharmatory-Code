@@ -6,13 +6,13 @@ Created on Sun Feb 24 10:40:53 2019
 """
 #Defining dictionary and an integer for the rest of the code
 import sys
-import os
+import csv
 dct={}
 i=1
 
 #Reading in the data as a comma delimited text
 lines =[]
-with open(sys.argv[1],'r') as f:
+with csv.reader(open(sys.argv[1],'r')) as f:
     content = [line for line in f if line.strip()]
 pharm = content
 #medical=0*len(pharm)
