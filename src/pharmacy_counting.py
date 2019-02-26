@@ -13,16 +13,24 @@ i=1
 lines =[]
 with open(sys.argv[1]) as f:
     content = [line for line in f if line.strip()]
-pharm=content
+pharm = content
+medical=0*len(pharm)
+
+for i in range (pharm):
+    medical[i]= [0, '', '', 0]
+
 for i in range (len(pharm)):
     pharm[i] = pharm[i].split(",")
 
 #Combining first name and last name to get full name
-for i in range(len(content)): 
-    pharm[i][1] = pharm[i][1] + ' ' +pharm[i][2]
 
+for i in range(len(pharm)): 
+    medical[i][3] = pharm[i][4]
+    medical[i][2] = pharm[i][3]
+    medical[i][1] = pharm[i][1] + ' ' +pharm[i][2]
+    
 #Making a list of the name of drugs by creating a dictionary and a for loop   
-for drug in content:
+for drug in medical:
     dct.setdefault(drug[3],[]).append(drug)     
 med= list(dct.keys())
 
