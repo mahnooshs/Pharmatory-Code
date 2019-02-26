@@ -16,7 +16,7 @@ with open(sys.argv[1]) as f:
 pharm = content
 medical=0*len(pharm)
 
-for i in range (pharm):
+for i in range (len(pharm)):
     medical[i]= [0, '', '', 0]
 
 for i in range (len(pharm)):
