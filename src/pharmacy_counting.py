@@ -51,7 +51,9 @@ for i in range (len(med)):
                 name[j]=(dct[med[i]])[j][1]  
     indiv[i]=len(name)-name.count([]) 
 #Calculation the total cost for each drug based on dctionary values
-x=0*len(med)*len(dct[med])
+
+x=0*len(med)*len(dct(med))
+
 for i in range (len(med)):
     for j in range (len(dct[med[i]])):
         x[i][j]=0
