@@ -31,7 +31,7 @@ for i in range(len(pharm)):
     
 #Making a list of the name of drugs by creating a dictionary and a for loop   
 for drug in medical:
-    dct.setdefault(drug[3],[]).append(drug)     
+    dct.setdefault(drug[2],[]).append(drug)     
 med= list(dct.keys())
 
 #Defining the objects that we are using during the rest of the code, the for loop is to make sure the length is sufficient
