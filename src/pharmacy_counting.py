@@ -67,14 +67,14 @@ for i in range (len(med)):
 #Filling out the data with the info that I extracted from the initial dataset
 for i in range (len(med)):
     data[i][0]= med[i]
-    data[i][1]= totcost[i]
-    data[i][2]=indiv[i]
+    data[i][1]= indiv[i]
+    data[i][2]=totcost[i]
  #Sorting data first based on the name and then based on the cost (to make sure cost comes first and then drugs are sorted by alphabet)   
 data.sort(key=lambda x: x[0])    
 data.sort(key=lambda x: x[1], reverse=True)    
 
 #Inserting column names
-data.insert(0,['Drug','Total Cost','Unique Individuals'])   
+data.insert(0,['drug_name','num_prescriber','total_cost'])   
 #IF YOU PRINT data, it is the output!
 #Creating output file in the directory
 with open(sys.argv[2], 'w') as output:
