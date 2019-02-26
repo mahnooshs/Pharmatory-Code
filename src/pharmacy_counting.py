@@ -38,11 +38,12 @@ med= list(dct.keys())
 name=[1]*len(med)
 totcost=[1]*len(med)
 indiv=[1]*len(med)
+x=0*len(med)
 for i in range ((len(med))):
     totcost[i]=0
     name[i]=[]
     indiv[i]=0
- 
+    
 #Counting unique names of individuals that consumed each drug     
 for i in range (len(med)):
     name=[0]*len(dct[med[i]])
@@ -50,13 +51,16 @@ for i in range (len(med)):
                 name[j]=(dct[med[i]])[j][1]  
     indiv[i]=len(name)-name.count([]) 
 #Calculation the total cost for each drug based on dctionary values
+
 for i in range (len(med)):
     for j in range (len(dct[med[i]])):
-        (dct[med[i]])[j][4]=float((dct[med[i]])[j][4])
+        (x[i])[j]=float((dct[med[i]])[j][4])
+        #(dct[med[i]])[j][4]=float((dct[med[i]])[j][4])
 #Total cost is as follows        
 for i in range (len(med)):
     for j in range (len(dct[med[i]])):
-        totcost[i]=totcost[i]+(dct[med[i]])[j][4]
+        #totcost[i]=totcost[i]+(dct[med[i]])[j][4]
+        totcost[i]=totcost[i]+(x[i])[j]
         
           
                 
