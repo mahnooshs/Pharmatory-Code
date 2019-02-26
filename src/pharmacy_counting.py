@@ -12,15 +12,17 @@ infile = sys.argv[1]
 outfile = sys.argv[2]
 #file = open(sys.argv[1],'r')
 #Opening the text file
-#file = open("..\\input\\itcont.txt",'r')
+file = open("..\\input\\itcont.txt",'r')
 #Skiping the header line 
-#next (file)
+next (file)
 #Reading in the data as a comma delimited text
 #content = file.readlines()
 
 lines = []
-with open(sys.argv[1]) as f:
+with file as f:
     content = [line for line in f if line.strip()]
+#with open(sys.argv[1]) as f:
+ #   content = [line for line in f if line.strip()]
 pharm=content
 for i in range (len(pharm)):
     pharm[i] = pharm[i].split(",")
@@ -50,26 +52,12 @@ for i in range (len(med)):
     for j in range (len(dct[med[i]])):
                 name[j]=(dct[med[i]])[j][1]  
     indiv[i]=len(name)-name.count([]) 
-#Calculation the total cost for each drug based on dctionary values
-
-x=0*len(med)
-
-#for i in range (len(med)):
-  #  for j in range (len(dct[med[i]])):
-   #     x[i][j]=[0]
-
-#for i in range (len(med)):
-    #for j in range (len(dct[med[i]])):
-        #x[i][j]=float((dct[med[i]])[j][4])
-        #(dct[med[i]])[j][4]= float((dct[med[i]])[j][4])
-#Total cost is as follows        
+#Calculation the total cost for each drug based on dctionary values      
 for i in range (len(med)):
     for j in range (len(dct[med[i]])):
         totcost[i]=totcost[i]+float((dct[med[i]])[j][4])
-        #totcost[i]=totcost[i]+(x[i])[j]
-        
-          
-                
+
+
 #Creating a dataset that includes all the info that I created
 data=[0]*(len(med))
 for i in range (len(med)):
