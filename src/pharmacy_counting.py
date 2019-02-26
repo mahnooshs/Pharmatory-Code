@@ -56,7 +56,7 @@ x=0*len(med)
 
 for i in range (len(med)):
     for j in range (len(dct[med[i]])):
-        x[i][j]=0
+        x[i][j]=[0]
 
 for i in range (len(med)):
     for j in range (len(dct[med[i]])):
