@@ -58,13 +58,13 @@ for i in range (len(med)):
 
 for i in range (len(med)):
     for j in range (len(dct[med[i]])):
-        x[i][j]=0=float((dct[med[i]])[j][4])
+        x[i][j]=float((dct[med[i]])[j][4])
         #(dct[med[i]])[j][4]= float((dct[med[i]])[j][4])
 #Total cost is as follows        
 for i in range (len(med)):
     for j in range (len(dct[med[i]])):
-        totcost[i]=totcost[i]+(dct[med[i]])[j][4]
-        #totcost[i]=totcost[i]+(x[i])[j]
+        #totcost[i]=totcost[i]+(dct[med[i]])[j][4]
+        totcost[i]=totcost[i]+(x[i])[j]
         
           
                 
