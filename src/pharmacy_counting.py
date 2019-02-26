@@ -11,9 +11,11 @@ dct={}
 i=1
 
 #Reading in the data as a comma delimited text
-lines =[]
-with csv.reader(open(sys.argv[1],'r')) as f:
-    content = [line for line in f if line.strip()]
+content =[]
+file= csv.reader(open(sys.argv[1],'r'), delimiter=',')
+next(file, None)
+for line in file:
+    content.append(line)
 pharm = content
 #medical=0*len(pharm)
 
