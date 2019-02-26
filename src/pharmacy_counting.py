@@ -54,7 +54,7 @@ for i in range (len(med)):
 #Calculation the total cost for each drug based on dctionary values 
 for i in range (len(med)):
     for j in range (len(dct[med[i]])):
-        totcost[i]=totcost[i]+int((dct[med[i]])[j][3])
+        totcost[i]=totcost[i]+(dct[med[i]])[j][3]
 
 
 #Creating a dataset that includes all the info that I created
@@ -65,7 +65,7 @@ for i in range (len(med)):
 for i in range (len(med)):
     data[i][0]= med[i]
     data[i][1]= indiv[i]
-    data[i][2]=totcost[i]
+    data[i][2]='%g'% (totcost[i])
  #Sorting data first based on the name and then based on the cost (to make sure cost comes first and then drugs are sorted by alphabet) 
 data.sort(key=lambda x: x[1])
 data.sort(key=lambda x: x[0], reverse=True)
@@ -81,3 +81,5 @@ with open(sys.argv[2], 'w') as output:
 #with open(sys.argv[2], 'w') as output:
  # for item in data:
   # output.write("%s\n" % item)
+  
+  
