@@ -25,7 +25,7 @@ for i in range (len(pharm)):
 #Combining first name and last name to get full name
 
 for i in range(len(pharm)): 
-    medical[i][3] = pharm[i][4]
+    medical[i][3] = float(pharm[i][4])
     medical[i][2] = pharm[i][3]
     medical[i][1] = pharm[i][1] + ' ' +pharm[i][2]
     medical[i][0]=pharm[i][0]
