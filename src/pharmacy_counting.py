@@ -74,11 +74,11 @@ data.sort(key=lambda x: x[0], reverse=True)
 data.insert(0,['drug_name','num_prescriber','total_cost'])   
 #IF YOU PRINT data, it is the output!
 #Creating output file in the directory
+#with open(sys.argv[2], 'w') as output:
+    #csv_writer = csv.writer(output)
+    #csv_writer.writerows(data)
 with open(sys.argv[2], 'w') as output:
-    csv_writer = csv.writer(output)
-    csv_writer.writerows(data)
-
-   # for item in data:
-    #    output.write("%s\n" % item)
+   for item in data:
+      output.write("%s\n" % item)
         
 
