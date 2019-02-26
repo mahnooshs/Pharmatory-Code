@@ -54,7 +54,7 @@ for i in range (len(med)):
 #Calculation the total cost for each drug based on dctionary values 
 for i in range (len(med)):
     for j in range (len(dct[med[i]])):
-        totcost[i]=totcost[i]+int(dct[med[i]])[j][3]
+        totcost[i]=totcost[i]+int((dct[med[i]])[j][3])
 
 
 #Creating a dataset that includes all the info that I created
