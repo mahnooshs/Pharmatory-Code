@@ -22,8 +22,8 @@ pharm = content
 #for i in range (len(pharm)):
 medical= [[0, '', '', 0] for j in range(len(pharm))]
 
-for i in range (len(pharm)):
-    pharm[i] = pharm[i].split(",")
+#for i in range (len(pharm)):
+ #   pharm[i] = pharm[i].split(",")
 
 #Combining first name and last name to get full name
 
