@@ -5,11 +5,14 @@ Created on Sun Feb 24 10:40:53 2019
 @author: m7979
 """
 #Defining dictionary and an integer for the rest of the code
+import sys
 dct={}
 i=1
-
+infile = sys.argv[1]
+outfile = sys.argv[2]
+file = open(sys.argv[1],'r')
 #Opening the text file
-file = open("..\\input\\itcont.txt",'r')
+#file = open("..\\input\\itcont.txt",'r')
 #Skiping the header line 
 next (file)
 #Reading in the data as a comma delimited text
@@ -69,7 +72,7 @@ data.sort(key=lambda x: x[1], reverse=True)
 data.insert(0,['Drug','Total Cost','Unique Individuals'])   
 #IF YOU PRINT data, IT is the output!
 #Creating output file in the directory
-with open('top_cost_drug.txt', 'w') as output:
+with open(sys.argv[2], 'w') as output:
     for item in data:
         output.write("%s\n" % item)
         
