@@ -38,7 +38,7 @@ med= list(dct.keys())
 name=[1]*len(med)
 totcost=[1]*len(med)
 indiv=[1]*len(med)
-x=0*len(med)
+
 for i in range ((len(med))):
     totcost[i]=0
     name[i]=[]
@@ -54,13 +54,13 @@ for i in range (len(med)):
 
 for i in range (len(med)):
     for j in range (len(dct[med[i]])):
-        (x[i])[j]=float((dct[med[i]])[j][4])
-        #(dct[med[i]])[j][4]=float((dct[med[i]])[j][4])
+        #(x[i])[j]=float((dct[med[i]])[j][4])
+        (dct[med[i]])[j][4]=float((dct[med[i]])[j][4])
 #Total cost is as follows        
 for i in range (len(med)):
     for j in range (len(dct[med[i]])):
-        #totcost[i]=totcost[i]+(dct[med[i]])[j][4]
-        totcost[i]=totcost[i]+(x[i])[j]
+        totcost[i]=totcost[i]+(dct[med[i]])[j][4]
+        #totcost[i]=totcost[i]+(x[i])[j]
         
           
                 
