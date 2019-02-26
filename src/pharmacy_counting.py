@@ -7,11 +7,11 @@ Created on Sun Feb 24 10:40:53 2019
 #Defining dictionary and an integer for the rest of the code
 import sys
 import csv
+content =[]
 dct={}
 i=1
 
 #Reading in the data as a comma delimited text
-content =[]
 file= csv.reader(open(sys.argv[1],'r'), delimiter=',')
 next(file, None)
 for line in file:
@@ -19,8 +19,8 @@ for line in file:
 pharm = content
 
 #for i in range (len(pharm)):
-medical= [[0, '', '', 0] for j in range(len(pharm))]
-#medical= [0, '', '',0]*len(pharm)
+#medical= [[0, '', '', 0] for j in range(len(pharm))]
+medical= [0, '', '',0]*len(pharm)
 #for i in range(len(pharm)):
  #   medical[i]=[0, '', '', 0]
 
@@ -77,7 +77,6 @@ data.insert(0,['drug_name','num_prescriber','total_cost'])
 #IF YOU PRINT data, it is the output!
 #Creating output file in the directory
 with open(sys.argv[2], 'w') as output:
-    #csv_writer = csv.writer(output)
     csv.writer(output).writerows(data)
 
 #in case you want to get a text file as output please run follosing codes
