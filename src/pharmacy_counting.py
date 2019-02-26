@@ -8,9 +8,6 @@ Created on Sun Feb 24 10:40:53 2019
 import sys
 dct={}
 i=1
-infile = sys.argv[1]
-outfile = sys.argv[2]
-
 
 #Reading in the data as a comma delimited text
 lines =[]
@@ -66,7 +63,7 @@ data.sort(key=lambda x: x[1], reverse=True)
 
 #Inserting column names
 data.insert(0,['Drug','Total Cost','Unique Individuals'])   
-#IF YOU PRINT data, IT is the output!
+#IF YOU PRINT data, it is the output!
 #Creating output file in the directory
 with open(sys.argv[2], 'w') as output:
     for item in data:
