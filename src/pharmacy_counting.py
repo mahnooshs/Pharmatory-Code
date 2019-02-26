@@ -54,7 +54,7 @@ for i in range (len(med)):
 #Calculation the total cost for each drug based on dctionary values      
 for i in range (len(med)):
     for j in range (len(dct[med[i]])):
-        totcost[i]=totcost[i]+(dct[med[i]])[j][3]
+        totcost[i]=totcost[i]+int((dct[med[i]])[j][3])
 
 
 #Creating a dataset that includes all the info that I created
@@ -74,11 +74,11 @@ data.sort(key=lambda x: x[0], reverse=True)
 data.insert(0,['drug_name','num_prescriber','total_cost'])   
 #IF YOU PRINT data, it is the output!
 #Creating output file in the directory
-#with open(sys.argv[2], 'w') as output:
-    #csv_writer = csv.writer(output)
-    #csv_writer.writerows(data)
 with open(sys.argv[2], 'w') as output:
-   for item in data:
-      output.write("%s\n" % item)
+    csv_writer = csv.writer(output)
+    csv_writer.writerows(data)
+#with open(sys.argv[2], 'w') as output:
+ #  for item in data:
+  #    output.write("%s\n" % item)
         
 
