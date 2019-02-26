@@ -6,6 +6,7 @@ Created on Sun Feb 24 10:40:53 2019
 """
 #Defining dictionary and an integer for the rest of the code
 import sys
+import os
 dct={}
 i=1
 
