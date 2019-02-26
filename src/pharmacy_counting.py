@@ -14,10 +14,10 @@ lines =[]
 with open(sys.argv[1]) as f:
     content = [line for line in f if line.strip()]
 pharm = content
-medical=0*len(pharm)
+#medical=0*len(pharm)
 
-for i in range (len(pharm)):
-    medical[i]= [0, '', '', 0]
+#for i in range (len(pharm)):
+medical= [[0, '', '', 0] for j in range(len(pharm))]
 
 for i in range (len(pharm)):
     pharm[i] = pharm[i].split(",")
