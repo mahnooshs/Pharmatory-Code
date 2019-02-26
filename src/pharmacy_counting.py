@@ -68,8 +68,8 @@ data.sort(key=lambda x: x[1], reverse=True)
 data.insert(0,['Drug','Total Cost','Unique Individuals'])   
 #IF YOU PRINT data, IT is the output!
 #Creating output file in the directory
-with open('output.txt', 'w') as f:
+with open('top_cost_drug.txt', 'w') as output:
     for item in data:
-        f.write("%s\n" % item)
+        output.write("%s\n" % item)
         
 
