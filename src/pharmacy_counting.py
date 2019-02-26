@@ -17,12 +17,13 @@ file = open(sys.argv[1],'r')
 next (file)
 #Reading in the data as a comma delimited text
 content = file.readlines()
-for i in range (len(content)):
-    content[i] = content[i].split(",")
+pharm=content
+for i in range (len(pharm)):
+    pharm[i] = pharm[i].split(",")
 
 #Combining first name and last name to get full name
 for i in range(len(content)): 
-    content[i][1] = content[i][1] + ' ' +content[i][2]
+    pharm[i][1] = pharm[i][1] + ' ' +pharm[i][2]
 
 #Making a list of the name of drugs by creating a dictionary and a for loop   
 for drug in content:
