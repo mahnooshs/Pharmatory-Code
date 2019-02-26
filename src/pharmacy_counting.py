@@ -19,8 +19,10 @@ for line in file:
 pharm = content
 
 #for i in range (len(pharm)):
-medical= [[0, '', '', 0] for j in range(len(pharm))]
-
+#medical= [[0, '', '', 0] for j in range(len(pharm))]
+medical= [0,'','',0]*len(pharm)
+for i in range(len(pharm)):
+    medical[i]=[0,'','',0]
 
 #Combining first name and last name to get full name
 
@@ -77,6 +79,8 @@ data.insert(0,['drug_name','num_prescriber','total_cost'])
 with open(sys.argv[2], 'w') as output:
     csv_writer = csv.writer(output)
     csv_writer.writerows(data)
+
+#in case you want to get a text file as output please run follosing codes
 #with open(sys.argv[2], 'w') as output:
  #  for item in data:
   #    output.write("%s\n" % item)
