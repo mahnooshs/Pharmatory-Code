@@ -11,7 +11,7 @@ i=1
 
 #Reading in the data as a comma delimited text
 lines =[]
-with open(sys.argv[1]) as f:
+with open(sys.argv[1],'r') as f:
     content = [line for line in f if line.strip()]
 pharm = content
 #medical=0*len(pharm)
