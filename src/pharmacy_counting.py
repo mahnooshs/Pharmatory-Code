@@ -70,8 +70,8 @@ for i in range (len(med)):
     data[i][1]= indiv[i]
     data[i][2]=totcost[i]
  #Sorting data first based on the name and then based on the cost (to make sure cost comes first and then drugs are sorted by alphabet)   
-data.sort(key=lambda x: x[0])    
-data.sort(key=lambda x: x[1], reverse=True)    
+data.sort(key=lambda x: x[1])    
+data.sort(key=lambda x: x[0], reverse=True)    
 
 #Inserting column names
 data.insert(0,['drug_name','num_prescriber','total_cost'])   
